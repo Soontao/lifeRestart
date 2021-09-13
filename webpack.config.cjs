@@ -12,6 +12,12 @@ module.exports = {
         publicPath: '/',
       }
     ],
+    client: {
+      overlay: {
+        errors: true,
+        warnings: false
+      },
+    },
   },
   plugins: [new HtmlWebpackPlugin({
     template: path.join(__dirname, "./dist/index.template.html")
@@ -21,6 +27,7 @@ module.exports = {
     filename: 'bundle.js',
     clean: false,
   },
+  stats: { warnings: false },
   // resolve: {
   //   extensions: ['.js'],
   // },
