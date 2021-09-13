@@ -145,6 +145,12 @@ class App {
         </div>
         `);
 
+        talentPage.mounted = () => {
+            talentPage
+                .find('#random')
+                .trigger("click")
+        }
+
         const createTalent = ({ grade, name, description }) => {
             return $(`<li class="grade${grade}b">${name}（${description}）</li>`)
         };
