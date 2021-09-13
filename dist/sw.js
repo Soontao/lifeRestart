@@ -3,7 +3,7 @@ var CACHE_VERSION = 'sw_v1';
 var CACHE_FILES = [
   '/',
   '/dark.css',
-  '/iconfont.tff',
+  '/iconfont.ttf',
   '/iconfont.woff',
   '/iconfont.woff2',
   '/images/icons/icon-72x72.png',
