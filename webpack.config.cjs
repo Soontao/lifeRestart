@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -7,31 +8,18 @@ module.exports = {
   devServer: {
     static: [
       {
-        directory: path.join(__dirname, 'data'),
-        publicPath: '/data',
-      },
-      {
-        directory: path.join(__dirname, 'public'),
-        publicPath: '/public',
-      },
-      {
-        directory: path.join(__dirname, 'view'),
-        publicPath: '/view',
-      },
-      {
-        directory: path.join(__dirname, 'src'),
-        publicPath: '/src',
-      },
-      {
-        directory: path.join(__dirname, 'lib'),
-        publicPath: '/lib',
+        directory: path.join(__dirname, 'dist'),
+        publicPath: '/',
       }
     ],
   },
+  plugins: [new HtmlWebpackPlugin({
+    template: path.join(__dirname, "./dist/index.html")
+  })],
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
-    clean: true,
+    clean: false,
   },
   // resolve: {
   //   extensions: ['.js'],

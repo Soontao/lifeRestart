@@ -1,4 +1,5 @@
 import { max, min, sum, clone, listRandom } from './functions/util.js';
+import $ from "jquery"
 
 class Property {
     constructor() {}

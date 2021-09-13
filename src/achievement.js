@@ -2,6 +2,7 @@ import { clone } from './functions/util.js';
 import { checkCondition } from './functions/condition.js';
 
 class Achievement {
+    
     constructor() {}
 
     // 时机

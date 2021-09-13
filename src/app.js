@@ -1,6 +1,8 @@
 import { summary } from './functions/summary.js';
 import { getRate, getGrade } from './functions/addition.js';
 import Life from './life.js';
+import $ from "jquery"
+import domtoimage from 'dom-to-image';
 
 class App{
     constructor(){

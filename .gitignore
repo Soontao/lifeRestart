@@ -111,4 +111,7 @@ __localStorage.json
 
 # generated
 /data/*.json
+/data/*.csv
 /public/*
+/view/*bundle.js
+/view/scripts/*

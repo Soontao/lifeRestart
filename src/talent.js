@@ -1,6 +1,7 @@
 import { clone, weightRandom } from './functions/util.js';
 import { checkCondition, extractMaxTriggers } from './functions/condition.js';
 import { getRate } from './functions/addition.js';
+import $ from "jquery"
 
 class Talent {
     constructor() {}
