@@ -1,21 +1,7 @@
 var CACHE_VERSION = 'sw_v1';
 
-var CACHE_FILES = [
-  '/',
-  '/dark.css',
-  '/iconfont.ttf',
-  '/iconfont.woff',
-  '/iconfont.woff2',
-  '/images/icons/icon-72x72.png',
-  '/images/icons/icon-144x144.png',
-];
-
 self.addEventListener('install', function (event) {
-  event.waitUntil(
-    caches.open(CACHE_VERSION)
-      .then(cache => cache.addAll(CACHE_FILES)
-        .then(() => self.skipWaiting())
-      ));
+
 });
 
 self.addEventListener('activate', function (event) {
@@ -30,4 +16,13 @@ self.addEventListener('activate', function (event) {
   );
 });
 
-self.addEventListener('fetch', function (event) { });
+self.addEventListener('fetch', function (event) {
+  event.respondWith(
+    caches.open('dynamic-cache').then(function (cache) {
+      return fetch(event.request).then(function (response) {
+        cache.put(event.request, response.clone());
+        return response;
+      });
+    })
+  );
+});
