@@ -38,9 +38,9 @@
 
 @font-face {
   font-family: 'iconfont';
-  src: url('iconfont.woff2?t=1628944689555') format('woff2'),
-    url('iconfont.woff?t=1628944689555') format('woff'),
-    url('iconfont.ttf?t=1628944689555') format('truetype');
+  src: url('iconfont.woff2') format('woff2'),
+    url('iconfont.woff') format('woff'),
+    url('iconfont.ttf') format('truetype');
 }
 
 * {
@@ -79,10 +79,8 @@ body {
 }
 
 #restart {
-  position: fixed;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: auto;
+  bottom: 1rem;
 }
 
 #restart .iconfont {
@@ -138,7 +136,7 @@ body {
 #specialthanks,
 #achievement {
   position: fixed;
-  top: 4rem;
+  top: 1rem;
   right: 1rem;
   padding: 0.1rem;
   width: 6rem;
